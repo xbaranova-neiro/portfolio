@@ -389,7 +389,7 @@
         <h2 class="cta-title">Если тебе нужен сайт, который выглядит сильно и ощущается современно — давай соберём</h2>
         <p class="cta-text">Могу помочь с концепцией, структурой, упаковкой и реализацией. От первого вайба до готовой страницы.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary cursor-target" href="https://t.me/yourname" target="_blank" rel="noopener noreferrer">Написать мне</a>
+          <button class="btn btn-primary cursor-target" type="button" data-contact-modal-open>Написать мне</button>
           <a class="btn btn-ghost cursor-target" href="#projects">Посмотреть работы</a>
         </div>
       </div>
@@ -413,6 +413,45 @@
       </div>
     </footer>
   </main>
+
+  <div class="modal" id="contact-modal" aria-hidden="true">
+    <div class="modal__backdrop" data-contact-modal-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+      <button class="modal__close cursor-target" type="button" aria-label="Закрыть" data-contact-modal-close>×</button>
+      <h2 class="modal__title" id="contact-modal-title">Написать мне</h2>
+      <p class="modal__lead">Оставь контакты — я отвечу и уточню детали.</p>
+
+      <form class="modal__form" id="contact-form" novalidate>
+        <label class="field">
+          <span class="field__label">Имя</span>
+          <input class="field__input" name="name" type="text" autocomplete="name" required />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Почта</span>
+          <input class="field__input" name="email" type="email" autocomplete="email" inputmode="email" required />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Телефон</span>
+          <input class="field__input" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+        </label>
+
+        <label class="check">
+          <input class="check__input" name="consent" type="checkbox" required />
+          <span class="check__box" aria-hidden="true"></span>
+          <span class="check__text">Даю согласие на обработку моих персональных данных</span>
+        </label>
+
+        <p class="modal__error" id="contact-form-error" role="status" aria-live="polite"></p>
+
+        <div class="modal__actions">
+          <button class="btn btn-primary cursor-target" type="submit">Отправить</button>
+          <button class="btn btn-ghost cursor-target" type="button" data-contact-modal-close>Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <div id="target-cursor" class="target-cursor" aria-hidden="true" hidden>
     <div class="target-cursor__inner">
@@ -442,6 +481,82 @@
       }
 
       var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* Поп-ап форма "Написать мне" */
+      (function contactModal() {
+        var modal = document.getElementById('contact-modal');
+        if (!modal) return;
+
+        var openBtn = document.querySelector('[data-contact-modal-open]');
+        var closeEls = modal.querySelectorAll('[data-contact-modal-close]');
+        var dialog = modal.querySelector('.modal__dialog');
+        var form = document.getElementById('contact-form');
+        var errorEl = document.getElementById('contact-form-error');
+
+        var lastActive = null;
+
+        function setOpen(next) {
+          if (!dialog) return;
+          modal.classList.toggle('is-open', next);
+          modal.setAttribute('aria-hidden', next ? 'false' : 'true');
+          document.body.classList.toggle('modal-open', next);
+
+          if (next) {
+            lastActive = document.activeElement;
+            window.setTimeout(function () {
+              var first = modal.querySelector('input, button, textarea, select, a[href]');
+              if (first) first.focus();
+            }, 0);
+          } else {
+            if (errorEl) errorEl.textContent = '';
+            if (lastActive && typeof lastActive.focus === 'function') lastActive.focus();
+          }
+        }
+
+        function onKeyDown(e) {
+          if (!modal.classList.contains('is-open')) return;
+          if (e.key === 'Escape') {
+            e.preventDefault();
+            setOpen(false);
+          }
+        }
+
+        if (openBtn) {
+          openBtn.addEventListener('click', function () {
+            setOpen(true);
+          });
+        }
+
+        closeEls.forEach(function (el) {
+          el.addEventListener('click', function () {
+            setOpen(false);
+          });
+        });
+
+        window.addEventListener('keydown', onKeyDown);
+
+        if (form) {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if (errorEl) errorEl.textContent = '';
+
+            if (!form.checkValidity()) {
+              if (errorEl) errorEl.textContent = 'Заполни все поля и поставь галочку согласия.';
+              var invalid = form.querySelector(':invalid');
+              if (invalid && typeof invalid.focus === 'function') invalid.focus();
+              return;
+            }
+
+            // Пока без бэкенда: показываем успешную отправку и закрываем.
+            if (errorEl) errorEl.textContent = 'Спасибо! Я скоро отвечу.';
+            window.setTimeout(function () {
+              form.reset();
+              setOpen(false);
+            }, 800);
+          });
+        }
+      })();
 
       /* Печатающийся заголовок hero (адаптация TextType — без React/GSAP) */
       (function heroTextType() {
