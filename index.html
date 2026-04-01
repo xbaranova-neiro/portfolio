@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Coder — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
+  <a class="skip-link" href="#top">Перейти к содержимому</a>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__mesh"></div>
+    <div class="ambient__strip"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo cursor-target" href="#top">Vibe Coder</a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#about" class="cursor-target" data-nav="about">Обо мне</a>
+      <a href="#skills" class="cursor-target" data-nav="skills">Умею</a>
+      <a href="#projects" class="cursor-target" data-nav="projects">Проекты</a>
+      <a href="#testimonials" class="cursor-target" data-nav="testimonials">Отзывы</a>
+      <a href="#contact" class="nav-cta cursor-target" data-nav="contact">Связаться</a>
+    </nav>
+    <button type="button" class="nav-toggle cursor-target" aria-expanded="false" aria-label="Меню">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <span class="hero__rail" aria-hidden="true"></span>
+      <div class="hero__layout">
+        <div class="hero__content">
+          <p class="eyebrow">Vibe Coder / Portfolio / Web &amp; AI Experiences</p>
+          <h1 class="hero-title">
+            <span class="hero-type" aria-live="off"></span><span class="hero-type__cursor" aria-hidden="true">_</span>
+            <noscript>Я делаю сайты, интерфейсы и digital-проекты, которые выглядят как вайб, а работают как система</noscript>
+          </h1>
+          <p class="hero-lead">Не просто «что-то сверстать», а собрать ощущение, стиль, логику и подачу так, чтобы проект хотелось открыть, листать и запомнить.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary cursor-target" href="#projects">Посмотреть проекты</a>
+            <a class="btn btn-ghost cursor-target" href="#contact">Обсудить задачу</a>
+          </div>
+        </div>
+        <figure class="hero__visual">
+          <div class="hero__photo-frame cursor-target">
+            <img
+              class="hero__photo"
+              src="IMG_3885.JPG"
+              width="900"
+              height="1200"
+              alt="Портрет: вайб-кодер за работой"
+              decoding="async"
+            />
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-inner">
+        <h2 class="section-title">Я не просто пишу код — я собираю впечатление</h2>
+        <div class="about-grid">
+          <div class="about-text prose">
+            <p>Я работаю на стыке кода, визуала, UX и AI-инструментов. Для меня сайт — это не набор блоков. Это ощущение от проекта, ритм, подача, структура и то, как человек чувствует себя внутри интерфейса.</p>
+            <p><strong>Я делаю:</strong></p>
+            <ul class="check-list">
+              <li>лендинги</li>
+              <li>портфолио</li>
+              <li>промо-страницы</li>
+              <li>интерфейсы</li>
+              <li>спецпроекты</li>
+              <li>digital-концепты</li>
+              <li>AI-first сайты и продукты</li>
+            </ul>
+            <p class="about-closing">Мой подход — сделать быстро, красиво и не бездумно. Чтобы проект не выглядел как очередной шаблон, собранный без вкуса и идеи.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-inner">
+        <h2 class="section-title section-title--center">Что я делаю</h2>
+        <div class="cards-grid">
+          <article class="card cursor-target">
+            <h3 class="card-title">Лендинги</h3>
+            <p class="card-text">Сайты, которые не просто «есть», а собирают внимание, держат ритм и ведут человека по смыслу.</p>
+          </article>
+          <article class="card cursor-target">
+            <h3 class="card-title">Портфолио и личные сайты</h3>
+            <p class="card-text">Страницы, которые показывают не только работы, но и стиль, характер и уровень.</p>
+          </article>
+          <article class="card cursor-target">
+            <h3 class="card-title">Визуальные концепты</h3>
+            <p class="card-text">Когда нужен не просто сайт, а ощущение: атмосфера, характер, настроение, подача.</p>
+          </article>
+          <article class="card cursor-target">
+            <h3 class="card-title">AI + Web</h3>
+            <p class="card-text">Использую нейросети как инструмент ускорения и усиления идей, а не как замену мышлению.</p>
+          </article>
+          <article class="card cursor-target">
+            <h3 class="card-title">UX и структура</h3>
+            <p class="card-text">Продумываю, как человек читает, куда смотрит, где теряется и где принимает решение.</p>
+          </article>
+          <article class="card cursor-target">
+            <h3 class="card-title">Быстрый запуск</h3>
+            <p class="card-text">Могу собрать сильную первую версию быстро, без месяцев бесконечных согласований.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section approach" id="approach">
+      <div class="section-inner">
+        <h2 class="section-title">Как я работаю</h2>
+        <ol class="approach-list">
+          <li class="approach-item">
+            <span class="approach-num">01</span>
+            <div>
+              <h3 class="approach-item-title">Сначала вайб</h3>
+              <p>Я смотрю не только на задачу, но и на ощущение, которое должен передавать проект.</p>
+            </div>
+          </li>
+          <li class="approach-item">
+            <span class="approach-num">02</span>
+            <div>
+              <h3 class="approach-item-title">Потом структура</h3>
+              <p>Красивый сайт без логики — это просто красивая обёртка. Поэтому я собираю смысл, сценарий и путь пользователя.</p>
+            </div>
+          </li>
+          <li class="approach-item">
+            <span class="approach-num">03</span>
+            <div>
+              <h3 class="approach-item-title">Потом реализация</h3>
+              <p>Когда есть стиль и логика, проект собирается быстрее, точнее и выглядит сильно.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-inner">
+        <h2 class="section-title section-title--center">Избранные проекты</h2>
+        <div class="projects-list">
+          <article class="project-card cursor-target">
+            <div class="project-meta">
+              <span class="project-tag">Лендинг</span>
+            </div>
+            <h3 class="project-name">AI Landing Experience</h3>
+            <p class="project-desc">Лендинг для digital-продукта с акцентом на атмосферу, скорость восприятия и современный визуал.</p>
+            <p class="project-done"><strong>Что сделано:</strong> структура, тексты, дизайн-концепция, сборка.</p>
+          </article>
+          <article class="project-card cursor-target">
+            <div class="project-meta">
+              <span class="project-tag">Портфолио</span>
+            </div>
+            <h3 class="project-name">Portfolio for Creative Expert</h3>
+            <p class="project-desc">Личный сайт-портфолио, который показывает не только кейсы, но и стиль человека.</p>
+            <p class="project-done"><strong>Что сделано:</strong> позиционирование, подача, визуальный ритм, упаковка работ.</p>
+          </article>
+          <article class="project-card cursor-target">
+            <div class="project-meta">
+              <span class="project-tag">Промо</span>
+            </div>
+            <h3 class="project-name">Bot &amp; Funnel Page</h3>
+            <p class="project-desc">Промо-страница под воронку и digital-продукт с акцентом на конверсию и лёгкость восприятия.</p>
+            <p class="project-done"><strong>Что сделано:</strong> логика блоков, тексты, CTA, визуальный каркас.</p>
+          </article>
+          <article class="project-card cursor-target">
+            <div class="project-meta">
+              <span class="project-tag">Концепт</span>
+            </div>
+            <h3 class="project-name">Concept Site for AI Creator</h3>
+            <p class="project-desc">Сайт с упором на трендовую подачу, сильный первый экран и ощущение «это хочется переслать».</p>
+            <p class="project-done"><strong>Что сделано:</strong> creative direction, структура, визуальная концепция.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why" id="why">
+      <div class="section-inner why-inner">
+        <h2 class="section-title">Почему ко мне идут не просто за кодом</h2>
+        <p class="why-lead">Потому что я умею видеть проект целиком.</p>
+        <div class="why-columns">
+          <div class="why-col">
+            <p class="why-label">Не только:</p>
+            <ul>
+              <li>как это собрать</li>
+            </ul>
+          </div>
+          <div class="why-col why-col--accent">
+            <p class="why-label">но и:</p>
+            <ul>
+              <li>как это подать</li>
+              <li>как это будет восприниматься</li>
+              <li>где человек зацепится взглядом</li>
+              <li>что запомнит</li>
+              <li>почему это будет выглядеть дороже, чем стоит</li>
+            </ul>
+          </div>
+        </div>
+        <p class="why-formula">Я соединяю: эстетику + структуру + digital-мышление + скорость</p>
+      </div>
+    </section>
+
+    <section class="section stack" id="stack">
+      <div class="section-inner">
+        <h2 class="section-title section-title--center">Инструменты</h2>
+        <div class="badges">
+          <span class="badge cursor-target">ChatGPT</span>
+          <span class="badge cursor-target">Cursor</span>
+          <span class="badge cursor-target">HTML / CSS / JS</span>
+          <span class="badge cursor-target">React</span>
+          <span class="badge cursor-target">Tailwind</span>
+          <span class="badge cursor-target">Framer Motion</span>
+          <span class="badge cursor-target">Figma</span>
+          <span class="badge cursor-target">Tilda / Webflow / custom</span>
+          <span class="badge cursor-target">Telegram / Bots / AI tools</span>
+        </div>
+        <p class="stack-note">Но если честно — главный инструмент не стек, а вкус, насмотренность и умение собирать цельное впечатление.</p>
+      </div>
+    </section>
+
+    <section class="section testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="section-inner testimonials-section__head">
+        <h2 id="testimonials-heading" class="section-title section-title--center">Отзывы</h2>
+        <p class="testimonials-section__lead">
+          Коротко о том, как клиенты описывают сотрудничество: скорость, визуал и ощущение целостного продукта.
+        </p>
+      </div>
+
+      <div class="testimonials-scroll" id="testimonials-scroll">
+        <div class="testimonials-sticky">
+          <div class="testimonials-stack" role="list">
+            <article class="testimonial-card cursor-target" role="listitem">
+              <div class="testimonial-card__inner">
+                <div class="review-stars" role="img" aria-label="Оценка 5 из 5">
+                  <span class="review-stars__row" aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote class="testimonial-card__quote">
+                  <p>
+                    «Сайт вышел не как очередной шаблон, а как живой продукт: структура ясная, визуал попадает в настроение.
+                    Проект хотелось показывать партнёрам в первый же день.»
+                  </p>
+                </blockquote>
+                <div class="testimonial-card__author">
+                  <img
+                    class="testimonial-card__avatar"
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&amp;h=160&amp;fit=crop&amp;auto=format"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <p class="testimonial-card__name">Алина Морозова</p>
+                    <p class="testimonial-card__role">Продюсер digital-проектов</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card cursor-target" role="listitem">
+              <div class="testimonial-card__inner">
+                <div class="review-stars" role="img" aria-label="Оценка 4,5 из 5">
+                  <span class="review-stars__row review-stars__row--45" aria-hidden="true"
+                    >★★★★<span class="review-stars__half">★</span></span
+                  >
+                </div>
+                <blockquote class="testimonial-card__quote">
+                  <p>
+                    «Нужен был лендинг под AI-сервис за ограниченный срок. Получили сильный первый экран, понятные блоки и
+                    аккуратную подачу — без перегруза и «кричащего» дизайна.»
+                  </p>
+                </blockquote>
+                <div class="testimonial-card__author">
+                  <img
+                    class="testimonial-card__avatar"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&amp;h=160&amp;fit=crop&amp;auto=format"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <p class="testimonial-card__name">Кирилл Соколов</p>
+                    <p class="testimonial-card__role">Сооснователь AI-продукта</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card cursor-target" role="listitem">
+              <div class="testimonial-card__inner">
+                <div class="review-stars" role="img" aria-label="Оценка 5 из 5">
+                  <span class="review-stars__row" aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote class="testimonial-card__quote">
+                  <p>
+                    «Для студии важно, чтобы портфолио отражало характер команды. Собрали страницу с ритмом и смыслом —
+                    заявки стали приходить более «наших» людей.»
+                  </p>
+                </blockquote>
+                <div class="testimonial-card__author">
+                  <img
+                    class="testimonial-card__avatar"
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=160&amp;h=160&amp;fit=crop&amp;auto=format"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <p class="testimonial-card__name">Елена Васильева</p>
+                    <p class="testimonial-card__role">Креативный директор</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card cursor-target" role="listitem">
+              <div class="testimonial-card__inner">
+                <div class="review-stars" role="img" aria-label="Оценка 4,5 из 5">
+                  <span class="review-stars__row review-stars__row--45" aria-hidden="true"
+                    >★★★★<span class="review-stars__half">★</span></span
+                  >
+                </div>
+                <blockquote class="testimonial-card__quote">
+                  <p>
+                    «Работали над промо-страницей под воронку: логика блоков, тексты и визуальный каркас на уровне.
+                    Конверсия и время на странице выросли заметно.»
+                  </p>
+                </blockquote>
+                <div class="testimonial-card__author">
+                  <img
+                    class="testimonial-card__avatar"
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=160&amp;h=160&amp;fit=crop&amp;auto=format"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <p class="testimonial-card__name">Дмитрий Орлов</p>
+                    <p class="testimonial-card__role">Digital-маркетолог</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audience" id="audience">
+      <div class="section-inner">
+        <h2 class="section-title">Кому подойдёт моя работа</h2>
+        <ul class="audience-list">
+          <li class="cursor-target">экспертам</li>
+          <li class="cursor-target">креаторам</li>
+          <li class="cursor-target">digital-проектам</li>
+          <li class="cursor-target">AI-продуктам</li>
+          <li class="cursor-target">студиям</li>
+          <li class="cursor-target">тем, кому нужен сайт с характером</li>
+          <li class="cursor-target">тем, кто не хочет шаблонную безликую страницу</li>
+        </ul>
+      </div>
+    </section>
+
+    <blockquote class="manifest" cite="#">
+      <p>Хороший сайт — это не когда «нормально сверстано». Это когда у проекта появляется энергия, форма и ощущение, что он живой.</p>
+    </blockquote>
+
+    <section class="section cta-final" id="cta">
+      <div class="section-inner cta-inner">
+        <h2 class="cta-title">Если тебе нужен сайт, который выглядит сильно и ощущается современно — давай соберём</h2>
+        <p class="cta-text">Могу помочь с концепцией, структурой, упаковкой и реализацией. От первого вайба до готовой страницы.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary cursor-target" href="https://t.me/yourname" target="_blank" rel="noopener noreferrer">Написать мне</a>
+          <a class="btn btn-ghost cursor-target" href="#projects">Посмотреть работы</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="footer-inner">
+        <h2 class="footer-title">Контакты</h2>
+        <div class="footer-contacts">
+          <p><a class="cursor-target" href="https://t.me/yourname" target="_blank" rel="noopener noreferrer">Telegram: @yourname</a></p>
+          <p><a class="cursor-target" href="mailto:hello@yourmail.com">Email: hello@yourmail.com</a></p>
+        </div>
+        <div class="footer-social" aria-label="Соцсети и портфолио">
+          <a class="cursor-target" href="#" aria-label="Behance">Behance</a>
+          <a class="cursor-target" href="#" aria-label="Dribbble">Dribbble</a>
+          <a class="cursor-target" href="#" aria-label="GitHub">GitHub</a>
+          <a class="cursor-target" href="#" aria-label="Notion">Notion</a>
+          <a class="cursor-target" href="#" aria-label="Instagram">Instagram</a>
+        </div>
+        <p class="footer-copy">© Vibe Coder — Web &amp; AI Experiences</p>
+      </div>
+    </footer>
+  </main>
+
+  <div id="target-cursor" class="target-cursor" aria-hidden="true" hidden>
+    <div class="target-cursor__inner">
+      <span class="target-cursor__dot"></span>
+      <span class="target-cursor__corner target-cursor__corner--tl"></span>
+      <span class="target-cursor__corner target-cursor__corner--tr"></span>
+      <span class="target-cursor__corner target-cursor__corner--br"></span>
+      <span class="target-cursor__corner target-cursor__corner--bl"></span>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('.nav');
+      if (btn && nav) {
+        btn.addEventListener('click', function () {
+          var open = nav.classList.toggle('nav--open');
+          btn.setAttribute('aria-expanded', open);
+        });
+        nav.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            nav.classList.remove('nav--open');
+            btn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* Печатающийся заголовок hero (адаптация TextType — без React/GSAP) */
+      (function heroTextType() {
+        var typeEl = document.querySelector('.hero-type');
+        var cursorEl = document.querySelector('.hero-type__cursor');
+        var h1 = document.querySelector('.hero-title');
+        if (!typeEl || !h1) return;
+
+        var texts = [
+          'Я делаю сайты, интерфейсы и digital-проекты, которые выглядят как вайб, а работают как система',
+          'Не шаблон — а ощущение, ритм и подача, которые запоминаются.',
+          'От первого вайба до сильной страницы — быстро и со вкусом.'
+        ];
+
+        var typingSpeed = 52;
+        var deletingSpeed = 38;
+        var pauseDuration = 2000;
+        var pauseBeforeDelete = 2200;
+        var loop = true;
+        var initialDelay = 500;
+
+        if (reduceMotion) {
+          typeEl.textContent = texts[0];
+          if (cursorEl) cursorEl.style.visibility = 'hidden';
+          return;
+        }
+
+        var textIndex = 0;
+        var charIndex = 0;
+        var deleting = false;
+        var timer = null;
+
+        function schedule(fn, ms) {
+          if (timer) clearTimeout(timer);
+          timer = setTimeout(fn, ms);
+        }
+
+        function step() {
+          var full = texts[textIndex];
+          if (!deleting) {
+            if (charIndex < full.length) {
+              charIndex += 1;
+              typeEl.textContent = full.slice(0, charIndex);
+              schedule(step, typingSpeed);
+            } else {
+              if (!loop && textIndex === texts.length - 1) {
+                return;
+              }
+              var pauseAfter =
+                textIndex === texts.length - 1 ? Math.max(pauseDuration, pauseBeforeDelete) : pauseDuration;
+              schedule(function () {
+                deleting = true;
+                step();
+              }, pauseAfter);
+            }
+          } else {
+            if (charIndex > 0) {
+              charIndex -= 1;
+              typeEl.textContent = full.slice(0, charIndex);
+              schedule(step, deletingSpeed);
+            } else {
+              deleting = false;
+              textIndex += 1;
+              if (textIndex >= texts.length) {
+                if (!loop) return;
+                textIndex = 0;
+              }
+              schedule(step, 420);
+            }
+          }
+        }
+
+        schedule(step, initialDelay);
+      })();
+
+      /* Прогресс скролла */
+      function updateScrollProgress() {
+        var doc = document.documentElement;
+        var body = document.body;
+        var total = (body.scrollHeight || doc.scrollHeight) - window.innerHeight;
+        var p = total > 0 ? window.scrollY / total : 0;
+        doc.style.setProperty('--scroll-progress', Math.min(1, Math.max(0, p)).toFixed(4));
+      }
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+      window.addEventListener('resize', updateScrollProgress, { passive: true });
+      updateScrollProgress();
+
+      /* Отзывы: по очереди одна карточка в фокусе; текущая уезжает вверх — видна следующая */
+      function updateTestimonialStack() {
+        var wrap = document.getElementById('testimonials-scroll');
+        if (!wrap) return;
+        var cards = wrap.querySelectorAll('.testimonial-card');
+        var n = cards.length;
+        if (!n) return;
+
+        var motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var rect = wrap.getBoundingClientRect();
+        var vh = window.innerHeight;
+        var scrollRange = Math.max(1, wrap.offsetHeight - vh);
+        var scrolled = -rect.top + vh * 0.28;
+        var p = scrolled / scrollRange;
+        p = Math.max(0, Math.min(1, p));
+
+        function smoothstep(t) {
+          t = Math.max(0, Math.min(1, t));
+          return t * t * (3 - 2 * t);
+        }
+
+        var flyPx = Math.min(620, Math.max(380, vh * 0.85));
+        var stackStep = 52;
+
+        cards.forEach(function (card, i) {
+          card.style.pointerEvents = '';
+
+          if (!motionOk) {
+            card.style.opacity = '1';
+            card.style.zIndex = String(24 - i);
+            card.style.transform =
+              'translate3d(-50%, calc(-50% + ' + i * 22 + 'px), 0) rotate(0deg) scale(' +
+              (1 - i * 0.02) +
+              ')';
+            return;
+          }
+
+          var seg = p * n;
+          var active = Math.min(n - 1, Math.floor(seg));
+          var u = seg - active;
+          if (active === n - 1 && u >= 1 - 1e-6) u = 1;
+
+          var y = 0;
+          var rot = 0;
+          var scale = 1;
+          var opacity = 1;
+          var z = 20;
+
+          if (i < active) {
+            y = -flyPx - 40;
+            rot = -5;
+            scale = 0.94;
+            opacity = 0;
+            z = 5 + i;
+            card.style.pointerEvents = 'none';
+          } else if (i === active) {
+            var holdEnd = n === 1 ? 1 : 0.52;
+            var isLastCard = active === n - 1;
+            if (isLastCard) {
+              y = 0;
+              rot = 0;
+              scale = 1;
+              opacity = 1;
+              z = 100;
+            } else if (u < holdEnd) {
+              y = 0;
+              rot = 0;
+              scale = 1;
+              opacity = 1;
+              z = 100;
+            } else {
+              var t = smoothstep((u - holdEnd) / (1 - holdEnd));
+              y = -flyPx * t;
+              rot = -7 * t;
+              scale = 1 - 0.06 * t;
+              opacity = 1 - t;
+              z = Math.round(80 - t * 30);
+              if (t > 0.85) card.style.pointerEvents = 'none';
+            }
+          } else {
+            var depth = i - active;
+            var baseY = stackStep * depth;
+            z = 60 - depth * 8;
+            scale = 1 - 0.045 * depth;
+            opacity = Math.max(0.5, 0.95 - 0.1 * depth);
+            rot = 2.5 * depth;
+
+            if (i === active + 1 && active < n - 1) {
+              var holdEnd2 = 0.52;
+              if (u > holdEnd2) {
+                var t2 = smoothstep((u - holdEnd2) / (1 - holdEnd2));
+                y = baseY * (1 - t2);
+                rot = rot * (1 - t2);
+                scale = scale + (1 - scale) * t2;
+                opacity = opacity + (1 - opacity) * t2;
+                z = Math.round(90 + t2 * 25);
+              } else {
+                y = baseY;
+              }
+            } else {
+              y = baseY;
+            }
+          }
+
+          card.style.opacity = String(opacity);
+          card.style.zIndex = String(z);
+          card.style.transform =
+            'translate3d(-50%, calc(-50% + ' +
+            y +
+            'px), 0) rotate(' +
+            rot +
+            'deg) scale(' +
+            scale +
+            ')';
+        });
+      }
+      window.addEventListener('scroll', updateTestimonialStack, { passive: true });
+      window.addEventListener('resize', updateTestimonialStack, { passive: true });
+      updateTestimonialStack();
+
+      /* Активный пункт меню по секциям */
+      var navIds = ['about', 'skills', 'projects', 'testimonials', 'contact'];
+      var navLinks = document.querySelectorAll('.nav a[data-nav]');
+
+      function updateActiveNav() {
+        var header = document.querySelector('.site-header');
+        var offset = header ? header.offsetHeight + 24 : 100;
+        var y = window.scrollY + offset;
+        var current = '';
+        for (var i = navIds.length - 1; i >= 0; i--) {
+          var el = document.getElementById(navIds[i]);
+          if (el && el.offsetTop <= y) {
+            current = navIds[i];
+            break;
+          }
+        }
+        navLinks.forEach(function (a) {
+          var id = a.getAttribute('data-nav');
+          a.classList.toggle('is-active', id === current);
+        });
+      }
+      window.addEventListener('scroll', updateActiveNav, { passive: true });
+      window.addEventListener('resize', updateActiveNav, { passive: true });
+      updateActiveNav();
+
+      /* Курсор-мишень (адаптация TargetCursor — без React/GSAP) */
+      (function targetCursor() {
+        if (reduceMotion) return;
+
+        function isCoarsePointer() {
+          return window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+        }
+
+        function isMobileUa() {
+          var touch = 'ontouchstart' in window || (navigator.maxTouchPoints || 0) > 0;
+          var narrow = window.innerWidth <= 768;
+          var ua = (navigator.userAgent || '').toLowerCase();
+          var m = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(ua);
+          return (touch && narrow) || m;
+        }
+
+        if (isCoarsePointer() || isMobileUa()) return;
+
+        var root = document.getElementById('target-cursor');
+        if (!root) return;
+
+        var inner = root.querySelector('.target-cursor__inner');
+        var dot = root.querySelector('.target-cursor__dot');
+        var cornerEls = root.querySelectorAll('.target-cursor__corner');
+        if (!inner || !dot || cornerEls.length !== 4) return;
+
+        root.removeAttribute('hidden');
+
+        var targetSelector = '.cursor-target';
+        var spinDuration = 2;
+        var hoverDuration = 0.2;
+        var hideDefaultCursor = true;
+        var parallaxOn = true;
+        var borderW = 3;
+        var cornerSize = 12;
+
+        var defaultOffsets = [
+          { x: -18, y: -18 },
+          { x: 6, y: -18 },
+          { x: 6, y: 6 },
+          { x: -18, y: 6 }
+        ];
+
+        var mouseX = window.innerWidth * 0.5;
+        var mouseY = window.innerHeight * 0.5;
+        var posX = mouseX;
+        var posY = mouseY;
+        var innerRot = 0;
+        var pressScale = 1;
+        var activeTarget = null;
+        var leaveFn = null;
+
+        var corners = [
+          { x: -18, y: -18 },
+          { x: 6, y: -18 },
+          { x: 6, y: 6 },
+          { x: -18, y: 6 }
+        ];
+
+        var strength = 0;
+        var strengthGoal = 0;
+        var strength0 = 0;
+        var strengthT0 = 0;
+
+        if (hideDefaultCursor) document.body.classList.add('has-target-cursor');
+
+        function easeOutQuad(t) {
+          return 1 - (1 - t) * (1 - t);
+        }
+
+        function closestTarget(el) {
+          while (el && el !== document.body && el.nodeType === 1) {
+            if (el.matches(targetSelector)) return el;
+            el = el.parentElement;
+          }
+          return null;
+        }
+
+        function rectCorners(rect) {
+          return [
+            { x: rect.left - borderW, y: rect.top - borderW },
+            { x: rect.right + borderW - cornerSize, y: rect.top - borderW },
+            { x: rect.right + borderW - cornerSize, y: rect.bottom + borderW - cornerSize },
+            { x: rect.left - borderW, y: rect.bottom + borderW - cornerSize }
+          ];
+        }
+
+        function beginStrength(to) {
+          strengthGoal = to;
+          strength0 = strength;
+          strengthT0 = performance.now();
+        }
+
+        function detachLeave() {
+          if (leaveFn && activeTarget) {
+            activeTarget.removeEventListener('mouseleave', leaveFn);
+          }
+          leaveFn = null;
+        }
+
+        function onLeave() {
+          detachLeave();
+          activeTarget = null;
+          beginStrength(0);
+          innerRot = innerRot % 360;
+        }
+
+        function onEnter(target) {
+          if (activeTarget === target) return;
+          detachLeave();
+          activeTarget = target;
+          innerRot = 0;
+          beginStrength(1);
+          leaveFn = onLeave;
+          target.addEventListener('mouseleave', leaveFn);
+        }
+
+        document.addEventListener(
+          'mouseover',
+          function (e) {
+            var t = closestTarget(e.target);
+            if (t) onEnter(t);
+          },
+          true
+        );
+
+        window.addEventListener(
+          'mousemove',
+          function (e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+          },
+          { passive: true }
+        );
+
+        function scrollCheck() {
+          if (!activeTarget) return;
+          var el = document.elementFromPoint(mouseX, mouseY);
+          if (!el || !(el === activeTarget || activeTarget.contains(el))) {
+            onLeave();
+          }
+        }
+        window.addEventListener('scroll', scrollCheck, { passive: true });
+
+        window.addEventListener('mousedown', function () {
+          pressScale = 0.9;
+        });
+        window.addEventListener('mouseup', function () {
+          pressScale = 1;
+        });
+
+        var lastT = performance.now();
+
+        function tick(now) {
+          var dt = Math.min(48, now - lastT);
+          lastT = now;
+
+          posX += (mouseX - posX) * 0.17;
+          posY += (mouseY - posY) * 0.17;
+
+          if (strengthT0 > 0) {
+            var dur = hoverDuration * 1000;
+            var u = Math.min(1, (now - strengthT0) / dur);
+            strength = strength0 + (strengthGoal - strength0) * easeOutQuad(u);
+            if (u >= 1) {
+              strengthT0 = 0;
+              strength = strengthGoal;
+            }
+          }
+
+          if (!activeTarget) {
+            innerRot = (innerRot + (dt / 1000) * (360 / spinDuration)) % 360;
+          }
+
+          if (activeTarget) {
+            var rect = activeTarget.getBoundingClientRect();
+            var pts = rectCorners(rect);
+            var s = parallaxOn ? 0.2 + 0.58 * strength : 0.85;
+            for (var i = 0; i < 4; i++) {
+              var tx = pts[i].x - posX;
+              var ty = pts[i].y - posY;
+              corners[i].x += (tx - corners[i].x) * s;
+              corners[i].y += (ty - corners[i].y) * s;
+            }
+          } else {
+            var back = 0.16 + 0.48 * (1 - strength);
+            for (var j = 0; j < 4; j++) {
+              corners[j].x += (defaultOffsets[j].x - corners[j].x) * back;
+              corners[j].y += (defaultOffsets[j].y - corners[j].y) * back;
+            }
+          }
+
+          root.style.transform = 'translate3d(' + posX + 'px,' + posY + 'px,0)';
+
+          var rot = activeTarget ? 0 : innerRot;
+          inner.style.transform =
+            'translate(-50%,-50%) rotate(' + rot + 'deg) scale(' + pressScale + ')';
+
+          var dScale = pressScale < 1 ? 0.74 : 1;
+          dot.style.transform = 'translate(-50%,-50%) scale(' + dScale + ')';
+
+          for (var k = 0; k < 4; k++) {
+            cornerEls[k].style.transform =
+              'translate3d(' + corners[k].x + 'px,' + corners[k].y + 'px,0)';
+          }
+
+          requestAnimationFrame(tick);
+        }
+
+        requestAnimationFrame(tick);
+      })();
+
+      /* Поочерёдное появление карточек в блоках */
+      if (!reduceMotion) {
+        document.body.classList.add('motion-stagger');
+
+        function staggerChildren(sectionId, selector, delayMs) {
+          var section = document.getElementById(sectionId);
+          if (!section) return;
+          var items = section.querySelectorAll(selector);
+          if (!items.length) return;
+          var done = false;
+          var obs = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting || done) return;
+                done = true;
+                items.forEach(function (item, i) {
+                  window.setTimeout(function () {
+                    item.classList.add('is-inview');
+                  }, delayMs * i);
+                });
+                obs.disconnect();
+              });
+            },
+            { threshold: 0.08, rootMargin: '0px 0px -6% 0px' }
+          );
+          obs.observe(section);
+        }
+
+        staggerChildren('projects', '.project-card', 85);
+        staggerChildren('audience', '.audience-list li', 55);
+      }
+    })();
+  </script>
+</body>
+</html>
